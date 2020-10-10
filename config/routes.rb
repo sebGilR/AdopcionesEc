@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  root 'pages#index'
   devise_for :users
+  root 'pages#index'
 
   namespace :api do
     namespace :v1 do
@@ -8,5 +8,12 @@ Rails.application.routes.draw do
     end
   end
 
+  devise_scope :user do
+    get '/register', to: 'devise/registrations#new'
+    get '/edit', to: 'devise/registrations#edit'
+    get '/login', to: 'devise/sessions#new'
+  end
+
+  
   get '*path', to: 'pages#index', via: :all
 end
