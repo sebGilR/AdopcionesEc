@@ -1,7 +1,7 @@
 import React from 'react';
 
 const App = () => (
-  <div>Hi from React</div>
+  <div>Hi from AdopcionesEc</div>
 )
 
 export default App;
