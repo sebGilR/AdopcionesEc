@@ -1,7 +1,6 @@
 module Api
   module V1
     class PetsController < ApplicationController
-      protect_from_forgery: false
       def index
         airlines = Pet.all
 
